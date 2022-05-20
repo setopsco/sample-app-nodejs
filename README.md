@@ -3,6 +3,8 @@
 A sample app for [SetOps](https://setops.co) built with [Node.js](https://nodejs.dev).
 Beware, this app has super-cow powers! :cow:
 
+![nodejs-sample browser screenshot](docs/screenshot.png)
+
 ## What to try
 
 1. Deploy the app as a sample app from the SetOps Web UI. You can select it from the list of sample apps when you create a stage.
@@ -42,13 +44,13 @@ Beware, this app has super-cow powers! :cow:
 
 1. Push the Docker image and activate the release:
 
-  ```
-  docker pull ghcr.io/setopsco/nodejs-sample
-  docker tag ghcr.io/setopsco/nodejs-sample api.setops.co/demo/samples/nodejs/web:latest
-  docker tag ghcr.io/setopsco/nodejs-sample api.setops.co/zweitag/samples/nodejs/web:latest
-  setops -p samples -s nodejs --app web release:create sha256:3899c519fe3d4ac08ef24bcca1ae7c1c5474f0448f474811f1c3cbda7229a0e4
-  setops -p samples -s nodejs --app web release:activate 1
-  setops -p samples -s nodejs changeset:commit
-  ```
+   ```
+   docker pull ghcr.io/setopsco/nodejs-sample
+   docker tag ghcr.io/setopsco/nodejs-sample api.setops.co/demo/samples/nodejs/web:latest
+   docker tag ghcr.io/setopsco/nodejs-sample api.setops.co/zweitag/samples/nodejs/web:latest
+   setops -p samples -s nodejs --app web release:create sha256:3899c519fe3d4ac08ef24bcca1ae7c1c5474f0448f474811f1c3cbda7229a0e4
+   setops -p samples -s nodejs --app web release:activate 1
+   setops -p samples -s nodejs changeset:commit
+   ```
 
 1. Open your app! :tada:
