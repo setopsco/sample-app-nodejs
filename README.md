@@ -1,7 +1,16 @@
 # nodejs-sample
 
 A sample app for [SetOps](https://setops.co) built with [Node.js](https://nodejs.dev).
+
 Beware, this app has super-cow powers! :cow:
+
+The app is [deployed on SetOps](https://web.nodejs.samples.zweitagapps.net) with GitHub Actions from this repository: [check out the deployment workflow](.github/workflows/deploy.yml)!
+
+If you want to deploy the app yourself, use the image referenced below. Apps created from a SetOps stage template use this image, too.
+
+```
+docker pull ghcr.io/setopsco/nodejs-sample:latest
+```
 
 ![nodejs-sample browser screenshot](docs/screenshot.png)
 
@@ -27,6 +36,9 @@ Beware, this app has super-cow powers! :cow:
 
 ## Creating the app
 
+> **Note**
+> These are the steps you need to follow to manually create the app in SetOps. You can use a stage template on the web UI to do this in one step.
+
 1. Create the stage: `setops -p samples stage:create nodejs`
 
 1. Create the app: `setops -p samples -s nodejs app:create web`
@@ -48,6 +60,7 @@ Beware, this app has super-cow powers! :cow:
    docker pull ghcr.io/setopsco/nodejs-sample
    docker tag ghcr.io/setopsco/nodejs-sample api.setops.co/demo/samples/nodejs/web:latest
    docker tag ghcr.io/setopsco/nodejs-sample api.setops.co/zweitag/samples/nodejs/web:latest
+   # note the sha256:[...] digest after pushing the image and paste it in "release:create"
    setops -p samples -s nodejs --app web release:create sha256:3899c519fe3d4ac08ef24bcca1ae7c1c5474f0448f474811f1c3cbda7229a0e4
    setops -p samples -s nodejs --app web release:activate 1
    setops -p samples -s nodejs changeset:commit

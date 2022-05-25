@@ -3,10 +3,8 @@ name: Build container image
 on:
   push:
     branches: [initial-version]
-  pull_request:
-    branches: [main]
   schedule:
-  - cron: "0 0 * * 0"
+  - cron: "0 0 * * 2"
 
 env:
   IMAGE_NAME: "nodejs-sample"
