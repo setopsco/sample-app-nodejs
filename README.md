@@ -1,4 +1,4 @@
-# nodejs-sample
+# sample-app-nodejs
 
 A sample app for [SetOps](https://setops.co) built with [Node.js](https://nodejs.dev).
 
@@ -9,10 +9,10 @@ The app is [deployed on SetOps](https://web.nodejs.samples.zweitagapps.net) with
 If you want to deploy the app yourself, use the image referenced below. Apps created from a SetOps stage template use this image, too.
 
 ```
-docker pull ghcr.io/setopsco/nodejs-sample:latest
+docker pull ghcr.io/setopsco/sample-app-nodejs:latest
 ```
 
-![nodejs-sample browser screenshot](docs/screenshot.png)
+![sample-app-nodejs browser screenshot](docs/screenshot.png)
 
 ## What to try
 
@@ -57,9 +57,9 @@ docker pull ghcr.io/setopsco/nodejs-sample:latest
 1. Push the Docker image and activate the release:
 
    ```
-   docker pull ghcr.io/setopsco/nodejs-sample
-   docker tag ghcr.io/setopsco/nodejs-sample api.setops.co/demo/samples/nodejs/web:latest
-   docker tag ghcr.io/setopsco/nodejs-sample api.setops.co/zweitag/samples/nodejs/web:latest
+   docker pull ghcr.io/setopsco/sample-app-nodejs:latest
+   docker tag ghcr.io/setopsco/sample-app-nodejs api.setops.co/demo/samples/nodejs/web:latest
+   docker tag ghcr.io/setopsco/sample-app-nodejs api.setops.co/zweitag/samples/nodejs/web:latest
    # note the sha256:[...] digest after pushing the image and paste it in "release:create"
    setops -p samples -s nodejs --app web release:create sha256:3899c519fe3d4ac08ef24bcca1ae7c1c5474f0448f474811f1c3cbda7229a0e4
    setops -p samples -s nodejs --app web release:activate 1

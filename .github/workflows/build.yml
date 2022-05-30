@@ -7,7 +7,7 @@ on:
   - cron: "0 0 * * 2"
 
 env:
-  IMAGE_NAME: "nodejs-sample"
+  IMAGE_NAME: "sample-app-nodejs"
 
 jobs:
   build:
