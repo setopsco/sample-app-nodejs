@@ -59,7 +59,7 @@ docker pull ghcr.io/setopsco/sample-app-nodejs:latest
    ```
    docker pull ghcr.io/setopsco/sample-app-nodejs:latest
    docker tag ghcr.io/setopsco/sample-app-nodejs api.setops.co/demo/samples/nodejs/web:latest
-   docker tag ghcr.io/setopsco/sample-app-nodejs api.setops.co/zweitag/samples/nodejs/web:latest
+   docker push api.setops.co/demo/samples/nodejs/web:latest
    # note the sha256:[...] digest after pushing the image and paste it in "release:create"
    setops -p samples -s nodejs --app web release:create sha256:3899c519fe3d4ac08ef24bcca1ae7c1c5474f0448f474811f1c3cbda7229a0e4
    setops -p samples -s nodejs --app web release:activate 1
